@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="resources/css/bootstrap.css">
+<script src="resources/js/angular.js"></script>
+<script  src="resources/js/angular-route.js"></script>
+<title>Forum</title>
+
+<body class="ng-cloak">
+<div class="generic-container" ng-controller="ForumController as ctrl">
+
+<div class="formcontainer">
+<div class="Absolute-Center is-Responsive">
+			<div id="logo-container"></div>
+			<div class="col-sm-12 col-md-10 col-md-offset-1">
+				<div class="form-group input-group">
+</div>
+					<div align="center">
+						<h3>
+							Add Forum
+						</h3>
+					</div>
+				</div>
+	<br>
+		<form ng-submit="ctrl.submit()" name="myForm">
+					
+						<div class="form-group input-group">
+						
+						
+					<div class="form-group input-group">
+						
+							<!-- <input class="form-control" type="text" ng-model="ctrl.user.id" path='blogid' placeholder="Forum  Id" /> -->
+							
+						</div>
+						<!--
+						<select path="category" class="form-control" ng-model="ctrl.user.category">
+							<option value="C">C</option>
+							<option value="C++">C++</option>
+							<option value="Java">Java</option>
+							<option value=".Net">.Net</option>
+							<option value="Oracle">Oracle</option>
+							<option value="DT Java">DT Java</option>
+						</select>
+						-->
+					</div>
+					<div class="form-group input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input class="form-control" type="text" path='forumtitle' placeholder="Forum Title" ng-model="ctrl.user.title"/>
+
+					</div>
+					<div class="form-group input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-comment"></i></span>
+						<textarea path="forumcontent" class="form-control"	placeholder="Forum Content" rows="20" ng-model="ctrl.user.description"></textarea>
+						<errors path="forumcontent" cssStyle="color: #ff0000;" />
+					</div>
+
+					<div class="form-group">
+							<button type="submit" class="btn btn-danger" style="width: 500px;">Register</button>
+					</div>
+						</form>
+
+
+	</div>
+	</div>
+	</div>
+	</body>
+
+
+</head>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+ <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="resources/css/bootstrap.css">
+<script src="resources/js/angular.js"></script>
+<script  src="resources/js/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-cookies.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+ <body>
+    <p>
+    <p>
+    <p>
+    <p>
+    <p>
+    <div ng-controller="ChatController" class="container">
+    
+    <p>
+    <p>
+    <p>
+    <p>
+    <p>
+      <form ng-submit="addMessage()" name="messageForm">
+        <input type="text" placeholder="Compose a new message..." ng-model="message" size="100"/>
+       <br/> <br/> 
+        <div class="info" style="font-family: Varela Round; font-size: large;">
+          <span class="count" ng-bind="max - message.length" ng-class="{danger: message.length > max}" >140</span>&nbsp
+          <button clng-disabled="message.length > max || message.length === 0" class="btn btn-link" >  Send  </button>
+        </div>
+      </form>
+      <hr />
+      <p ng-repeat="message in messages | orderBy:'time':true" class="message">
+        <time>{{message.time | date:'HH:mm'}}</time>
+      Message  <span ng-class="{self: message.self}">{{message.message}}</span>
+      </p>
+    </div>
+    
+</body>
+<script src="app.js"></script>
+
+</html>
